@@ -34,7 +34,7 @@
     </table>
     <div class="admin-register-btn">
       <button class="btn-register" type="submit" name="submit_admin_register">登録する</button>
-      <a class="btn-return" href="#">戻る</a>
+      <a class="btn-return" href="{{ route('admin.register.index') }}">戻る</a>
     </div>
   </form>
 </div>

@@ -1,30 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+require('./bootstrap');
 
-Vue.use(VueRouter)
+window.Vue = require('vue');
 
-import App from './App'
-import Hello from './views/Hello'
-import Home from './views/Home'
+let axios = require('axios');
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
-        {
-            path: '/hello',
-            name: 'hello',
-            component: Hello,
-        },
-    ],
-});
+Vue.component('contacts', require('./components/Contacts.vue'));
 
 const app = new Vue({
-    el: '#app',
-    components: { App },
-    router,
+    el: '#app'
 });

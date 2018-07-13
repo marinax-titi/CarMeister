@@ -21,7 +21,6 @@ Route::post('admin/doLogin', 'AdminUserController@doLogin')->name('admin.registe
 Route::get('admin/edit/{id}', 'AdminUserController@edit')->name('admin.register.edit');
 Route::post('admin/edit/{id}', 'AdminUserController@update')->name('admin.register.update');
 Route::get('admin/delete/{id}', 'AdminUserController@delete')->name('admin.register.delete');
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
